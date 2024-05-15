@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2b8bb8;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 80%;
+    overflow: hidden;
+}
+
+.player {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 10%;
+    margin: 0 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.game-board {
+    display: grid; 
+    grid-template-columns: repeat(7, 80px); 
+    grid-template-rows: repeat(7, 80px); 
+    gap: 5px; 
+    background-color: white;
+    padding: 20px; 
+    border-radius: 5%;
+    border: 2px solid black;
+}
+
+.circle {
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%; 
+    background-color: #2b8bb8;
+    box-shadow: inset 0px 5px 5px rgb(0, 0, 0), inset 0px -5px 5px rgba(0, 0, 0), inset -3px 0px 3px rgb(0, 0, 0), inset 3px 0px 3px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle .icon {
+    font-size: 3rem;
+}
+
+@media (max-width: 1500px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .game-board {
+        margin-top: 20px;
+        padding: 10px; 
+    }
+
+    .circle {
+        width: 40px; 
+        height: 40px;
+    }
+}
+
+#player1-score, #player2-score{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#player1Icon, #player2Icon {
+
+    width: 85px;
+    height: 85px; 
+    border: 3px solid black;
+    border-radius: 50%;
+    position: absolute;
+    margin-bottom: 200px;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+#player1Icon{
+    background-color: red;
+}
+#player2Icon{
+    background-color: rgb(199, 156, 17);
+}
